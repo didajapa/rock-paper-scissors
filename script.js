@@ -2,7 +2,7 @@
 // Random number between 1-3 for computer choice, return 'rock', 'paper' or 'scissors'
 function getComputerChoice(min, max){
     let x = Math.floor(Math.random()*(max-min + 1)) + min;
-    console.log(x);
+    // console.log(x);
     if (x === 1) {
         return "rock";
     } else if (x === 2) {
@@ -23,6 +23,9 @@ function playRound(playerSelection, computerSelection){
 // Player choice via prompt
 playerSelection = prompt("Rock, paper or scissors?");
 computerSelection = getComputerChoice(1,3);
+
+console.log(playerSelection.toLowerCase());
+console.log(computerSelection);
 
 switch (playerSelection.toLowerCase()){
     case 'rock':
@@ -63,8 +66,6 @@ switch (playerSelection.toLowerCase()){
     default:
         console.log(`You typed ${playerSelection}, pick rock, paper or scissors!`);
 }
-console.log(playerSelection.toLowerCase());
-console.log(computerSelection);
 
  }
 
