@@ -1,7 +1,9 @@
 let playerSelection;
 let computerSelection;
-playRound();
+let result;
 
+playRound();
+alert(result);
 
 // ---------- FUNCTIONS BELOW THIS LINE
 
@@ -22,41 +24,52 @@ function playRound(playerSelection, computerSelection){
         case 'rock':
             if (computerSelection === 'rock'){
                 console.log("It's a draw!");
+                result = "It's a draw!";
                 break;
             } else if (computerSelection === 'paper'){
                 console.log("Paper beats rock, you lose!");
+                result = "Paper beats rock, you lose!";
                 break;
             } else {
                 console.log("Rock beats scissors, you win!");
+                result = "Paper beats rock, you lose!";
                 break;
             }
 
         case 'paper':
             if (computerSelection === 'paper'){
                 console.log("It's a draw!");
+                result = "It's a draw!";
                 break;
             } else if (computerSelection === 'scissors'){
                 console.log("Scissors beat paper, you lose!");
+                result = "Scissors beat paper, you lose!";
                 break;
             } else {
                 console.log("Paper beats rock, you win!");
+                result = "Paper beats rock, you win!";
                 break;
             }
 
         case 'scissors':
             if (computerSelection === 'scissors'){
                 console.log("It's a draw!");
+                result = "It's a draw!";
                 break;
             } else if (computerSelection === 'rock'){
                 console.log("Rock beats scissors, you lose!");
+                result = "Rock beats scissors, you lose!";
                 break;
             } else {
                 console.log("Scissors beat paper, you win!");
+                result = "Scissors beat paper, you win!";
                 break;
             }
         default:
             console.log(`You typed ${playerSelection}, pick rock, paper or scissors!`);
-        }
+            result = `You typed ${playerSelection}, pick rock, paper or scissors!`;
+         }
+         return(result);
 }
 
 function getComputerChoice(min, max){
@@ -72,11 +85,4 @@ function getComputerChoice(min, max){
         return "scissors";
     }
 }
-
-
-
-// Game consists of 5 rounds.
-// const playerSelection = "rock";
-// const computerSelection = getComputerChoice();
-// console.log(playRound(playerSelection, computerSelection));
 
