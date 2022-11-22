@@ -24,7 +24,7 @@ if (win > lose) {
 } else {
     winLose = "It's a draw."
 }
-alert(win + ' win, ' + lose + ' loss, ' + draw + ' draw. ' + winLose);
+alert(win + ' win(s), ' + lose + ' loss(es), ' + draw + ' draw(s). ' + winLose);
 }
 
 
@@ -38,8 +38,8 @@ function playRound(playerSelection, computerSelection){
     computerSelection = getComputerChoice(1,3);
 
     // Output choices to console
-    console.log(playerSelection.toLowerCase());
-    console.log(computerSelection);
+    console.log("Player: " + playerSelection.toLowerCase());
+    console.log("Computer: " + computerSelection);
 
     // Declare win, lose or draw
     switch (playerSelection.toLowerCase()){
