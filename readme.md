@@ -15,4 +15,4 @@
 *RPS-UI edits*
 1. Remove the logic that plays exactly five rounds
 2. Create three buttons, one for each selection. Add eventlistener tot the buttons that call playRound function.
-
+3. Add div for results and change console.log into DOM methods.
