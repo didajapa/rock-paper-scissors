@@ -12,3 +12,7 @@
     - use `for` loop to play those five rounds
     - use `console.log` to display the results of each round and the winner at the end.
 
+*RPS-UI edits*
+1. Remove the logic that plays exactly five rounds
+2. Create three buttons, one for each selection. Add eventlistener tot the buttons that call playRound function.
+

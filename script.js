@@ -6,16 +6,13 @@ let lose = 0;
 let draw = 0;
 let winLose;
 
-game();
-// playRound();
-// alert(result);
 
 // ---------- FUNCTIONS BELOW THIS LINE
 function game(){
 // A game consists of 5 rounds
-    for (let i = 0; i < 5; i++) {
-        playRound();
-    }
+    // for (let i = 0; i < 5; i++) {
+    //     playRound();
+    // }
     
 if (win > lose) {
     winLose = 'You win!';
@@ -34,12 +31,13 @@ function playRound(playerSelection, computerSelection){
 // Return string that says if the player wins or loses.
 
     // Player choice via prompt, random choice for computer
-    playerSelection = prompt("Rock, paper or scissors?");
+    // playerSelection = prompt("Rock, paper or scissors?");
+    // playerSelection = 'test';
     computerSelection = getComputerChoice(1,3);
 
     // Output choices to console
-    console.log(playerSelection.toLowerCase());
-    console.log(computerSelection);
+    console.log("player: " + playerSelection.toLowerCase());
+    console.log("computer: " + computerSelection);
 
     // Declare win, lose or draw
     switch (playerSelection.toLowerCase()){
@@ -118,3 +116,12 @@ function getComputerChoice(min, max){
     }
 }
 
+// UI
+
+const rockButton = document.getElementById("rock");
+const paperButton = document.getElementById("paper");
+const scissorsButton = document.getElementById("scissors");
+
+rockButton.addEventListener('click', () => playRound("rock"));
+paperButton.addEventListener('click', () => playRound("paper"));
+scissorsButton.addEventListener('click', () => playRound("scissors"));
