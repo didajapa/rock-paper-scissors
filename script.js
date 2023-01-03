@@ -59,7 +59,7 @@ function playRound(playerSelection, computerSelection){
                 break;
             } else {
                 // console.log("Rock beats scissors, you win!");
-                result = "Paper beat scissors, you win!";
+                result = "Paper beats scissors, you win!";
                 win += 1;
                 break;
             }
