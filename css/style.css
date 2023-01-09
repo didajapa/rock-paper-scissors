@@ -11,44 +11,45 @@ h1, h3 {
 
 .container {
     display: flex;
-    /* flex-direction: column; */
     flex-wrap: nowrap;
     justify-content: center;
-    /* align-items: center; */
-    /* background-color: aqua; */
-    border: 5px solid white;
 
 }
 .gameContainer {
     display: flex;
-    /* justify-content: center; */
     flex-direction: column;
-    border: 5px solid white;
+    align-items: flex-start;
     width: 20vw;
-    text-align: center;
 }
 .scoreContainer {
     display: flex;
     flex-direction: column;
-    /* justify-content: left; */
     align-items: flex-start;
-    border: 5px solid white;
     margin-top: 1rem;
 }
 
 .playerPick {
-    border: 5px solid white;
     flex-direction: column;
     text-align: center;
 
 }
+
+.playerLine, .pcLine {
+    display: flex;
+    flex-direction: row;
+    border: 5px solid white;
+
+}
+
+.player, .computer, .roundResult {
+    font-weight: 900;
+    margin-left: 0.2em;
+}
+
 .buttonContainer {
     display: flex;
     flex-direction: row;
     justify-content: center;
-        /* gap: 1rem; */
-    /* min-width: 300px; */
-    /* border: 5px solid white; */
     width: 20vw;
 }
 
@@ -66,17 +67,14 @@ h1, h3 {
     width: 7vw;
     height: auto;
     padding: 0.5em;
-    /* margin: 1em; */
 }
 
 .buttonContainer img:hover {
-    /* box-shadow: 0 0 10px 10px rgba(0, 140, 186, 0.5); */
     opacity: 1;
     background-color: rgb(219, 171, 107);
 }
 
 .computerPick {
-    border: 5px solid white;
     width: 20vw;
     display: flex;
     flex-direction: column;

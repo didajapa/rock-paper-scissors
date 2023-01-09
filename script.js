@@ -34,9 +34,9 @@ function playRound(playerSelection, computerSelection){
     // playerSelection = prompt("Rock, paper or scissors?");
     // playerSelection = 'test';
     computerSelection = getComputerChoice(1,3);
-
-    playerChoice.textContent = "Player chooses: " + playerSelection.toLowerCase();
-    computerChoice.textContent = "Computer chooses: " + computerSelection;
+ 
+    playerChoice.textContent = playerSelection;
+    computerChoice.textContent = computerSelection;
 
     // Output choices to console
     // console.log("player: " + playerSelection.toLowerCase());
@@ -132,6 +132,8 @@ function getComputerChoice(min, max){
         return "scissors";
     }
 }
+
+
 
 // UI
 
