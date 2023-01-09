@@ -22,15 +22,17 @@ rockButton.addEventListener('click', () => playRound("rock"));
 paperButton.addEventListener('click', () => playRound("paper"));
 scissorsButton.addEventListener('click', () => playRound("scissors"));
 
+
+
 //FUNCTIONS
 function game(){
 // A game consists of 5 rounds
 
 if (win > lose) {
     winLose = 'You win!';
-} else if (win < lose){
+    } else if (win < lose){
     winLose = 'You lose!';
-} else {
+    } else {
     winLose = "It's a draw."
 }
 alert(win + ' win, ' + lose + ' loss, ' + draw + ' draw. ' + winLose);
@@ -108,8 +110,11 @@ function playRound(playerSelection, computerSelection){
         roundResult.textContent = result;
         playerScore.textContent = "Player: " + win;
         computerScore.textContent = "Computer: " + lose;
-           
+   
+    
+
     return(result);
+    
 }
 
 function getComputerChoice(min, max){
