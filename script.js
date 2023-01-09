@@ -87,6 +87,7 @@ function playRound(playerSelection, computerSelection){
                 // console.log("It's a draw!");
                 result = "It's a draw!";
                 draw += 1;
+
                 break;
             } else if (computerSelection === 'rock'){
                 // console.log("Rock beats scissors, you lose!");
@@ -106,8 +107,15 @@ function playRound(playerSelection, computerSelection){
          }
 
         roundResult.textContent = result;
+        playerScore.textContent = "Player: " + win;
+        computerScore.textContent = "Computer: " + lose;
+    
+    
+    
+    return(result);
 
-         return(result);
+
+
 
 }
 
@@ -133,6 +141,9 @@ const scissorsButton = document.getElementById("scissors");
 const playerChoice = document.querySelector('.player');
 const computerChoice = document.querySelector('.computer');
 const roundResult = document.querySelector('.roundResult');
+const playerScore = document.querySelector('.playerScore');
+const computerScore = document.querySelector('.computerScore');
+const gameScore = document.querySelector('.gameScore');
 
 rockButton.addEventListener('click', () => playRound("rock"));
 paperButton.addEventListener('click', () => playRound("paper"));

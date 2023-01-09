@@ -8,22 +8,42 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="bigAssContainer">
-        <div class="scoreContainer">
-            <div class="playerScore"></div>
-            <div class="computerScore"></div>
-            <div class="gameScore"></div>
+    <h1>Rock, paper, scissors</h1>
+    <h3>First one who wins 5 rounds is the winner</h3>
+    <div class="container">
+        <div class="playerPick">
+            <h3>Player</h3>
+            <div class="buttonContainer">
+                <img id="rock" src="img/rock.png">
+                <img id="paper" src="img/paper.png">
+                <img id="scissors" src="img/scissors.png">
+            </div>
         </div>
-        <div class="roundContainer">
-            <div class="player"></div>
-            <div class="computer"></div>
-            <div class="roundResult"></div>
+        <div class="gameContainer">
+            <div class="roundContainer">
+                
+                <div class="player"></div>
+                <div class="computer"></div>
+                <div class="roundResult"></div>
+            </div>
+            <div class="scoreContainer">
+                <div class="playerScore">Player: </div>
+                <div class="computerScore">Computer:</div>
+                <div class="gameScore"></div>
+            </div>
         </div>
-        <div class="buttonContainer">
-            <button id="rock">Rock</button>
-            <button id="paper">Paper</button>
-            <button id="scissors">Scissors</button>
+               
+        <div class="computerPick"> 
+            <!-- <img id="rock" src="img/rock.png">
+            <img id="paper" src="img/paper.png">
+            <img id="scissors" src="img/scissors.png"> -->
+            <h3>Computer</h3>
+            <img id="rpsPC" src="img/rps.png">
+
         </div>
+    </div>  
+    <div class="gameEnd">
+        <h2>Endresult</h2>
     </div>
     <script src="script.js"></script>
 </body>
