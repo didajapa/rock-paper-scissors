@@ -12,3 +12,4 @@
     - use `for` loop to play those five rounds
     - use `console.log` to display the results of each round and the winner at the end.
 
+test
