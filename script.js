@@ -1,3 +1,14 @@
+//VARIABLES
+const rockButton = document.getElementById("rock");
+const paperButton = document.getElementById("paper");
+const scissorsButton = document.getElementById("scissors");
+const playerChoice = document.querySelector('.player');
+const computerChoice = document.querySelector('.computer');
+const roundResult = document.querySelector('.roundResult');
+const playerScore = document.querySelector('.playerScore');
+const computerScore = document.querySelector('.computerScore');
+const gameScore = document.querySelector('.gameScore');
+
 let playerSelection;
 let computerSelection;
 let result;
@@ -6,14 +17,15 @@ let lose = 0;
 let draw = 0;
 let winLose;
 
+//EVENTLISTENERS
+rockButton.addEventListener('click', () => playRound("rock"));
+paperButton.addEventListener('click', () => playRound("paper"));
+scissorsButton.addEventListener('click', () => playRound("scissors"));
 
-// ---------- FUNCTIONS BELOW THIS LINE
+//FUNCTIONS
 function game(){
 // A game consists of 5 rounds
-    // for (let i = 0; i < 5; i++) {
-    //     playRound();
-    // }
-    
+
 if (win > lose) {
     winLose = 'You win!';
 } else if (win < lose){
@@ -24,14 +36,23 @@ if (win > lose) {
 alert(win + ' win, ' + lose + ' loss, ' + draw + ' draw. ' + winLose);
 }
 
-
-
 function playRound(playerSelection, computerSelection){    
 // Play round of game. Rock defeats scissors, scissors defeat paper, paper defeats rock
     computerSelection = getComputerChoice(1,3);
  
     playerChoice.textContent = playerSelection;
     computerChoice.textContent = computerSelection;
+
+    //Change image of computerChoice
+    document.getElementById("rpsPC").src = "img/rps.png";
+    if (computerSelection === 'rock'){
+        document.getElementById("rpsPC").src = "img/rock.png";
+    } else if (computerSelection === 'paper'){
+        document.getElementById("rpsPC").src = "img/paper.png";
+    } else {
+        document.getElementById("rpsPC").src = "img/scissors.png";
+    }
+
 
     // Declare win, lose or draw
     switch (playerSelection.toLowerCase()){
@@ -87,11 +108,9 @@ function playRound(playerSelection, computerSelection){
         roundResult.textContent = result;
         playerScore.textContent = "Player: " + win;
         computerScore.textContent = "Computer: " + lose;
-    
-    
-    
+           
     return(result);
-
+}
 
 function getComputerChoice(min, max){
     // Random number between 1-3 for computer choice, return 'rock', 'paper' or 'scissors'
@@ -105,19 +124,3 @@ function getComputerChoice(min, max){
         return "scissors";
     }
 }
-
-// UI
-
-const rockButton = document.getElementById("rock");
-const paperButton = document.getElementById("paper");
-const scissorsButton = document.getElementById("scissors");
-const playerChoice = document.querySelector('.player');
-const computerChoice = document.querySelector('.computer');
-const roundResult = document.querySelector('.roundResult');
-const playerScore = document.querySelector('.playerScore');
-const computerScore = document.querySelector('.computerScore');
-const gameScore = document.querySelector('.gameScore');
-
-rockButton.addEventListener('click', () => playRound("rock"));
-paperButton.addEventListener('click', () => playRound("paper"));
-scissorsButton.addEventListener('click', () => playRound("scissors"));

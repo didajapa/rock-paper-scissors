@@ -37,12 +37,15 @@ h1, h3 {
 .playerLine, .pcLine {
     display: flex;
     flex-direction: row;
-    border: 5px solid white;
+    /* border: 5px solid white; */
 
 }
 
 .player, .computer, .roundResult {
     font-weight: 900;
+}
+
+.player, .computer {
     margin-left: 0.2em;
 }
 
