@@ -111,7 +111,9 @@ function playRound(playerSelection, computerSelection){
         playerScore.textContent = "Player: " + win;
         computerScore.textContent = "Computer: " + lose;
    
-    
+        if (win === 5 | lose === 5) {
+            game();
+        }
 
     return(result);
     
