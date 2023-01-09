@@ -28,37 +28,23 @@ alert(win + ' win, ' + lose + ' loss, ' + draw + ' draw. ' + winLose);
 
 function playRound(playerSelection, computerSelection){    
 // Play round of game. Rock defeats scissors, scissors defeat paper, paper defeats rock
-// Return string that says if the player wins or loses.
-
-    // Player choice via prompt, random choice for computer
-    // playerSelection = prompt("Rock, paper or scissors?");
-    // playerSelection = 'test';
     computerSelection = getComputerChoice(1,3);
  
     playerChoice.textContent = playerSelection;
     computerChoice.textContent = computerSelection;
 
-    // Output choices to console
-    // console.log("player: " + playerSelection.toLowerCase());
-    // console.log("computer: " + computerSelection);
-
-
-
     // Declare win, lose or draw
     switch (playerSelection.toLowerCase()){
         case 'rock':
             if (computerSelection === 'rock'){
-                // console.log("It's a draw!");
                 result = "It's a draw!";
                 draw += 1;
                 break;
             } else if (computerSelection === 'paper'){
-                // console.log("Paper beats rock, you lose!");
                 result = "Paper beats rock, you lose!";
                 lose += 1;
                 break;
             } else {
-                // console.log("Rock beats scissors, you win!");
                 result = "Paper beats scissors, you win!";
                 win += 1;
                 break;
@@ -66,17 +52,14 @@ function playRound(playerSelection, computerSelection){
 
         case 'paper':
             if (computerSelection === 'paper'){
-                // console.log("It's a draw!");
                 result = "It's a draw!";
                 draw += 1;
                 break;
             } else if (computerSelection === 'scissors'){
-                // console.log("Scissors beat paper, you lose!");
                 result = "Scissors beat paper, you lose!";
                 lose += 1;
                 break;
             } else {
-                // console.log("Paper beats rock, you win!");
                 result = "Paper beats rock, you win!";
                 win += 1;
                 break;
@@ -84,24 +67,19 @@ function playRound(playerSelection, computerSelection){
 
         case 'scissors':
             if (computerSelection === 'scissors'){
-                // console.log("It's a draw!");
                 result = "It's a draw!";
                 draw += 1;
-
                 break;
             } else if (computerSelection === 'rock'){
-                // console.log("Rock beats scissors, you lose!");
                 result = "Rock beats scissors, you lose!";
                 lose += 1;
                 break;
             } else {
-                // console.log("Scissors beat paper, you win!");
                 result = "Scissors beat paper, you win!";
                 win += 1;
                 break;
             }
         default:
-            // console.log(`You typed ${playerSelection}, pick rock, paper or scissors!`);
             result = `You typed ${playerSelection}, pick rock, paper or scissors!`;
             i -= 1;
          }
@@ -115,15 +93,10 @@ function playRound(playerSelection, computerSelection){
     return(result);
 
 
-
-
-}
-
 function getComputerChoice(min, max){
     // Random number between 1-3 for computer choice, return 'rock', 'paper' or 'scissors'
 
     let x = Math.floor(Math.random()*(max-min + 1)) + min;
-    // console.log(x);
     if (x === 1) {
         return "rock";
     } else if (x === 2) {
@@ -132,8 +105,6 @@ function getComputerChoice(min, max){
         return "scissors";
     }
 }
-
-
 
 // UI
 
