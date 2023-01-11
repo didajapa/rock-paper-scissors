@@ -88,4 +88,17 @@ h1, h3 {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    font-weight: bold;
+}
+
+.gameEndContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#newGame {
+    border-radius: 5px;
+    padding: 1em;
+    margin-top: 1em;
 }
