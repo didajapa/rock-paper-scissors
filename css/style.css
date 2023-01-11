@@ -1,0 +1,104 @@
+body {
+    background-color: rgb(4, 11, 29);
+    margin: 0px;
+    padding: 0px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+}
+h1, h3 {
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+
+}
+.gameContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 20vw;
+}
+.scoreContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 1rem;
+}
+
+.playerPick {
+    flex-direction: column;
+    text-align: center;
+
+}
+
+.playerLine, .pcLine {
+    display: flex;
+    flex-direction: row;
+    /* border: 5px solid white; */
+
+}
+
+.player, .computer, .roundResult {
+    font-weight: 900;
+}
+
+.player, .computer {
+    margin-left: 0.2em;
+}
+
+.buttonContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 20vw;
+}
+
+.buttonContainer img {
+    background-color: burlywood;
+    border-radius: 50%;
+    width: 5vw;
+    height: auto;
+    opacity: 0.95;
+}
+
+#rpsPC {
+    background-color: burlywood;
+    border-radius: 50%;
+    width: 7vw;
+    height: auto;
+    padding: 0.5em;
+}
+
+.buttonContainer img:hover {
+    opacity: 1;
+    background-color: rgb(219, 171, 107);
+}
+
+.computerPick {
+    width: 20vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.gameEnd {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-weight: bold;
+}
+
+.gameEndContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#newGame {
+    border-radius: 5px;
+    padding: 1em;
+    margin-top: 1em;
+}
